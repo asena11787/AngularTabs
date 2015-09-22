@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="seed">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container" ng-controller="PanelController as panel">
+      <h2>Angular Tabs</h2>
+      <p>Experiment to create a seed project implementing tabs using AngularJS</p>
+
+      <ul class="nav nav-pills">
+        <li ng-class="{ active:panel.isSelected(1) }">
+          <a href ng-click="panel.selectTab(1)">JavaScript</a>
+        </li>
+        <li ng-class="{ active:panel.isSelected(2) }">
+          <a href ng-click="panel.selectTab(2)">CSS</a>
+        </li>
+        <li ng-class="{ active:panel.isSelected(3) }">
+          <a href ng-click="panel.selectTab(3)">HTML</a>
+        </li>
+      </ul>
+
+      <div class="panel" ng-show="panel.isSelected(1)">
+        <h4>JavaScript</h4>
+        <p>Here is some text for JavaScript</p>
+      </div>
+
+      <div class="panel" ng-show="panel.isSelected(2)">
+        <h4>CSS</h4>
+        <p>Here is some text for CSS</p>
+      </div>
+
+      <div class="panel" ng-show="panel.isSelected(3)">
+        <h4>HTML</h4>
+        <p>Here is some text for HTML</p>
+      </div>
+    </div>
+
+    <script src="//localhost:35729/livereload.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/controllers.js"></script>
+  </body>
+</html>
